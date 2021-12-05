@@ -1,5 +1,5 @@
 function ceo() {
-    setTimeout(() => console.log('I am the CEO'), 1)
+    setTimeout(() => console.log('I am the CEO'), 3000)
     cto()
 }
 
