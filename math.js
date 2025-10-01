@@ -1,3 +1,4 @@
+
 console.log(2 + 1)
 console.log(4 - 1)
 console.log(2 * 2)
@@ -40,3 +41,16 @@ console.log(Math.floor(2.4)) // transforms into an integer
 // get a random number between 0 and 3 
 console.log(Math.random() * 4) // return value between 0 and <4
 console.log(Math.floor(Math.random() * 4)) // 0, 1, 2 or 3
+
+// BONUS: Arrow Function
+
+function sub(a,b) {
+    return a - b
+}
+
+const sum = (a, b) => {
+    return a + b
+}
+
+console.log(sub(3, 2))
+console.log(sum(3, 2))

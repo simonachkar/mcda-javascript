@@ -7,65 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<h1>Hello World</h1>
-<button onclick="myFunction()">Click me!</button>
-<p id="p1"></p>
-
-
-<input />
-<button onclick="getData()">Get Data</button>
 
 <body>
-    <style>
-        .alert {
-            margin-top: 2rem;
-            padding: 15px;
-            border: 1px solid #d6e9c6;
-            border-radius: 4px;
-            color: #3c763d;
-            background-color: #dff0d8;
-        }
-    </style>
-    <script>
-        document.body.style.background = "red";
-        setTimeout(() => document.body.style.background = "", 3000);
-        console.log(document.getElementById('p1'))
-
-        function myFunction() {
-            // if (document.getElementById('p1').innerText === "Button Clicked") {
-            //     document.getElementById('p1').innerHTML = ""
-            // } else {
-            //     document.getElementById('p1').innerHTML = "Button Clicked"
-            // }
-            // document.getElementById('p1').innerHTML = "Button Clicked"
-            // setTimeout(() => document.getElementById('p1').innerHTML = "", 2000);
-
-            let div = document.createElement('div');
-            div.className = "alert";
-            div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
-
-            document.body.append(div);
-        }
-
-        function myFunction() {
-            if (document.getElementById('p1').innerText) {
-                document.getElementById('p1').innerText = ""
-            } else {
-                document.getElementById('p1').innerText = "Button Clicked"
-            }
-        }
-
-        // MORE EXAMPLE
-        function getData() {
-            let input = document.querySelector('input')
-            let { value } = document.querySelector('input')
-            if (value) alert("Your data: " + value)
-            else {
-                alert("value cannot be empty")
-                input.focus()
-            }
-        }
-    </script>
+    <h1>Hello World</h1>
+    <button onclick="myFunction()">Click me!</button>
+    <p id="p1"></p>
+    <input />
+    <button onclick="getData()">Get Data</button>
 </body>
+
+<style>
+    .alert {
+        margin-top: 2rem;
+        padding: 15px;
+        border: 1px solid #d6e9c6;
+        border-radius: 4px;
+        color: green;
+        background-color: #dff0d8;
+    }
+</style>
+
+<script>
+    console.log(document.getElementById('p1'))
+    var count = 0;
+
+    function myFunction() {
+        let div = document.createElement('div');
+        div.className = "alert";
+        div.innerHTML = `<strong>Hi there!</strong> You clicked me ${count++} times so far...`;
+
+        document.body.append(div);
+    }
+
+    // MORE EXAMPLE
+    function getData() {
+        let input = document.querySelector('input')
+        let { value } = document.querySelector('input')
+        if (value) alert("Your data: " + value)
+        else {
+            alert("value cannot be empty")
+            input.focus()
+        }
+    }
+</script>
+
+<script src="index.js"></script>
 
 </html>

@@ -16,6 +16,7 @@ user = new Object({
 console.log(typeof user, user)
 
 console.log(user.name) // John
+// console.log(...user)  // Spread Operator
 // console.log(user["like birds"]) // true
 
 delete user.job // delete property
@@ -47,7 +48,7 @@ user = {
     }
 }
 
-user.printNameArrow()
+user.printNameArrow() // error
 user.printName()
 
 // Creating objects with "Constructors"
